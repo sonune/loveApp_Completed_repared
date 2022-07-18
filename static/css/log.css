@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#body{
+    min-height: 200vh;
+    /* max-height: fit-content; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 0.2fr 0.8fr; */
+    grid-template-rows: 1fr;
+    background-color: #eee;
+    font-size: 0.8em;
+}
+#prembel{
+    margin-left: auto;
+    margin-right: auto;
+    /* min-height:10%; */
+    /* max-height: fit-content; */
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid black;
+    /* background-color: rgb(48, 34, 241); */
+    border-radius: 1em;
+    font-size: 1em;
+    padding: 0.5em;
+    font-family: 'Merienda', cursive;
+    box-shadow: 8px 6px 2px 1px rgba(189, 184, 184, 0.331);
+
+    color:purple;
+
+}
+#main-chat-log{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Merienda', cursive;
+    border-radius: 1em;
+    padding: 0.5em;
+    width: 80%;
+    /* min-height: 90%; */
+    /* max-height: fit-content; */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 8px 6px 2px 1px rgba(189, 184, 184, 0.331);
+
+    /* border: 1px solid black; */
+}
+
+
+#heading{
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Love Light', cursive;
+    /* font-family: 'Merienda', cursive; */
+
+
+}
+.chat-log{
+    border-radius: 4em;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 3em;
+    background-color: pink;
+    /* background-color: #fdf498; */
+
+    min-height: 80%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+.a-chat {
+    margin-top: 1em;
+    margin-left: 0.4em;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 20%;
+    min-height: 5%;
+    border: 1px solid black;
+    background-color: #eee;
+    border-radius: 1em;
+}
+.username-message {
+    margin-left: 0.5em;
+    display: inline-block;
+    font-size: 1.1em;
+    font-weight: 800;
+    font-family: 'Love Light', cursive;
+
+}
+
+
+
+
+.chat-message {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+    margin-left: 0.5em;
+    display: inline-block;
+    font-family: 'Merienda', cursive;
+    font-size: 1.2em;
+}
+
+
+
+.downbtn{
+    display: inline-block;
+    min-height: 1.5em;
+    /* width: 1em; */
+    border: 2px solid black;
+    background-color: grey;
+    color: white;
+    border-radius: 1em;
+    
+}
+.downbtn a{
+    font-size: 1.4em;
+    color: white;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    text-decoration: none;
+    font-family: 'Love Light', cursive;
+
+}
+
+
+
+#down{
+    text-align: center;
+    font-size: 4em;
+    height: 8em;
+    color: black;
+    font-family: 'Love Light', cursive;
+}

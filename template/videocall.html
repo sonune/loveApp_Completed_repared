@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kangaroos|Meeting</title>
+  <link rel="stylesheet" href="/static/css/CallingApp.css?{% now " U" %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Love+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+  <script> 
+    let pass = prompt("Please Enter the Password?")
+ if (pass == "9122275966") {
+     console.log("I am Sorry ,and I love you Neha");
+ }
+ else {
+     window.location.href = "https://jackjill.pythonanywhere.com/getout";
+ }
+ </script>
+
+
+ 
+
+</head>
+<body>
+  <h4 class="text-center" hidden>Kangaroos</h4>
+  <h3 id="label-username" hidden>Welcome</h3>
+    <!-- <button onclick="Toggle()">Navbar</button> -->
+    <div class="navbar"  style="display:none ;" id="navbar-real">
+      <div id="Left-heading">Kangaroos Meet</div>
+     <ul id="nav-list">
+        <li class="list-items"> <a href="https://jackjill.pythonanywhere.com/newwebapp">WebApp</a></li>
+        <li class="list-items"> <a href="https://jackjill.pythonanywhere.com/calldetect">KangarooCall</a></li>
+        <li class="list-items"> <a href="https://jackjill.pythonanywhere.com/Home">Main</a></li>
+        <li class="list-items"> <a href="https://jackjill.pythonanywhere.com/Our_Future+Voices">FuturePlans</a></li>
+      </ul>
+      <div id="Right-heading" onclick="logs()">logs</div>
+    </div>
+    <div id="navbar-fake" class="navbar">
+      <div id="Left-heading">Jack&Jill Meet</div>
+     <ul id="nav-list">
+        <li class="list-items"> <a href="https://www.jackandjill.in/#activities">Child Devlopment</a></li>
+        <li class="list-items"> <a href="https://www.jackandjill.in/#management">Mangement</a></li>
+        <li class="list-items"> <a href="https://www.jackandjill.in/#library">Main</a></li>
+        <li class="list-items"> <a href="https://www.jackandjill.in/#holidays">Holidays</a></li>
+      </ul>
+      <div id="Right-heading" >Universe</div>
+    </div>
+
+    <div class="controls">
+      <input id="username" value = '{{user}}' hidden><button id="btn-join" class="btn controls-item">Join Room</button>
+    <button id="btn-toggle-audio" class="btn btn-outline-light btn-dark controls-item">Audio Mute</button>
+    <button id="btn-toggle-video" class="btn btn-outline-light btn-dark controls-item">Video Off</button>
+    <button id="btn-toggle-video" class="btn btn-outline-light btn-dark controls-item" onclick="Toggle()">Toggle</button>
+
+    </div>
+
+    <div id="video-container" class="main-grid">
+      <div id="local-div">
+        <video id="local-video" autoplay playsinline></video>
+      </div>
+      
+        <!-- <video id="remote-video" autoplay playsinline></video> -->
+      
+
+      </div>
+     
+
+    <div class="chat-section" >
+    <button class="open-button btn btn-outline-dark btn-lg" onclick="openForm()">Chat <i class="far fa-comments"></i></button>
+
+      <div class="chat-popup" id="myForm">
+        <form class="form-container">
+          <h1>Chat <i class="far fa-comments"></i></h1>
+          <div id="messages">
+            <p id="message-list"></p>
+          </div>
+  
+          <label id="message-head" for="msg"><b>Message</b></label>
+          <textarea id="msg" placeholder="Type message.." name="msg" required></textarea>
+  
+          <button type="submit" id="btn-send-msg" class="btn">Send <i class="far fa-paper-plane"></i></button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close <i class="fas fa-times"></i></button>
+        </form>
+      </div>
+
+
+    </div>
+
+
+  <script src="/static/js/CallingApp.js?{% now " U" %}""></script>
+
+
+  
+</body>
+</html>

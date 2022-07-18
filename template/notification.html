@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jack and Jill | Notification_Kangaroo</title>
+</head>
+
+
+<body>
+
+    <h1>Notification page  is there....</h1>
+
+
+
+
+
+
+
+    <script>
+
+
+        let ws = new WebSocket(
+            'ws://' +
+            location.host +
+            '/ws/Notification/'
+        )
+
+
+        ws.onmessage = (e) => {
+            if (!window.Notification) return;
+
+            Notification
+                .requestPermission()
+                .then(showNotification);
+            // document.getElementById('sonu').innerHTML = 'value'
+
+        }
+        function showNotification(permission) {
+            if (permission !== 'granted') return;
+
+            let notification = new Notification('Mr Kangaroo, I Wanna Catch Up!', {
+                body: 'Notification from  Kangaroo',
+                icon: './static/img/kangaroo.png',
+                image: './static/img/jack&jill_context_image.jpg',
+
+            })
+            notification.onclick = function (event) {
+            event.preventDefault(); // prevent the browser from focusing the Notification's tab
+            window.open('https://jackjill.xyz/Sonu', '_blank');
+        }
+        }
+
+        function ping() {
+        ws.send(JSON.stringify({
+            'command' : 'ping',
+            'data' : 'not disconnect websocket',
+            'groupname' : 'loveNotification'
+
+        }))
+        console.log('pinging')
+    }
+
+    
+    setInterval(ping, 20000);
+
+    ws.onerror = (e) => {
+            location.reload()
+
+        }
+    ws.onclose = (e) => {
+            location.reload()
+
+        }
+        
+    </script>
+</body>
+
+</html>
