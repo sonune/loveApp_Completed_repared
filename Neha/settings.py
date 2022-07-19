@@ -155,3 +155,6 @@ STATICFILES_DIRS = [
     
 ]
 
+
+django.setup()
+
