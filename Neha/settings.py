@@ -13,8 +13,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Neha.settings')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+import django
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,7 +36,9 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'channels',
-
+    'django_extensions',
+    'corsheaders',
+    
     'loveAppCompleted',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -41,6 +46,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'gunicorn',
+    'uvicorn'
 ]
 
 MIDDLEWARE = [
