@@ -16,7 +16,7 @@ setInterval(Realtime, 1000);
 let validate = false;
 // let ws = new WebSocket('ws://127.0.0.1:8000/ws/loveChat/')
 let ws = new WebSocket(
-    'ws://' +
+    'wss://' +
     window.location.host +
     '/ws/loveChat/'
     )
