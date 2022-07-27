@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/log.css? 1653981104" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
+    <title>Jack and Jill | logs</title>
+	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=mpa1DpS5WgVZTxTmEpGqp_tShtymY3_L0q-o_W5PfjAIz21o3GpqtQQTSDP9sbIc" charset="UTF-8"></script><script> 
+       let pass = prompt("Please Enter the Password?")
+    if (pass == "9122275966") {
+        console.log("I am Sorry ,and I love you Neha");
+    }
+    else {
+        window.location.href = "https://jackjill.pythonanywhere.com/getout";
+    }
+	</script>
+</head>
+
+<body id="body">
+    <div id="main-chat-log">
+    <div id="heading">Chat-logs {from 17March-2022 se ab tak, Letter dene ke baad se}..kuch
+    me time sayad na dikhe ya date to samajh jaana, hmko mila nhi time bus message mil gya tha,aur isko likhne me to halat kharab ho gya,but kaam ho gya, ye ham isiliye banaye h,kynki agar tumhare dil me mere liye gussa aane lage, ya nafrat to padh lena..taaki tumko yaad aa jaay,kitna jhela h ham dono ne ek doosre ke liye,...aur kitna pyaar krte h hm tumse...I love you so much...waise jitna is_se pta chalega us_se hazaro laakho guna tumse pyaar krte h..Jo ham tumhare na ho paaye agar..to kisi aur ke kbhi nhi honge..hm waada karte h..I love you future wife.<br> Agar Naya wala messages dekhna ho to Recent-Messages wale button ko touch krna,<br>
+    <div class="downbtn">
+        <a href="#down">Recent-Messages</a><br>
+    </div> <br>
+    aur Sabse bada wala Promise,.hm bhi promise krte h..<br>
+    <div class="downbtn">
+        <a href="#10">Promise♥</a><br>
+    </div> <br>
+   
+    aur chat wala page me jaane ke liye New-loveApp wala button touch krdena.. <br>
+    <div class="downbtn">
+        <a href="https://jackjill.pythonanywhere.com/newwebapp">New-loveApp</a><br>
+    </div> <br>
+
+</div>
+        <div class="chat-log">
+            
+
+            <!-- ----------------static entries------------------------------ -->
+            {% for oldchat in old1  %}
+
+            <div class="a-chat">
+                <div class="username-message" style="font-family: 'Merienda', cursive;font-size: 0.8em;">{{oldchat.timestamp}}</div>
+                <div class="username-message">{{oldchat.user}}</div>
+                <div class="chat-message">{{oldchat.message}}</div>
+            </div> <br>
+
+            {% endfor %}
+
+            
+
+            <br>
+            <br>
+            <h1 style="text-align:center;" id = "100">Upar jo bhi tha wo hm type krke likhe hai to ho skta h date ya naam me galti ho , but  niche walen..automatic aaya h...kynki new webapp ban gya tha..,mtlb sahi sahi date time batayga.. </h1>
+            <br>
+            <div class="downbtn" style="margin-top: 2em;">
+                <a href="https://jackjill.pythonanywhere.com/newwebapp">shortcut-New-loveApp</a><br>
+            </div> <br>
+
+
+            <br>
+
+            
+            
+            
+
+
+
+
+
+
+
+
+
+            <!-- ----------------Dynamic entries------------------------------ -->
+
+            
+            {% for oldchat in old2  %}
+
+            <div class="a-chat">
+                <div class="username-message" style="font-family: 'Merienda', cursive;font-size: 0.8em;">{{oldchat.timestamp}}</div>
+                <div class="username-message">{{oldchat.user}}</div>
+                <div class="chat-message">{{oldchat.message}}</div>
+            </div> <br>
+
+            {% endfor %}
+
+            
+            <div class="a-chat" id="10">
+                <div class="username-message" style="font-family: 'Merienda', cursive;font-size: 0.8em;">May 26, 2022, 10:47 a.m.</div>
+                <div class="username-message">Adam</div>
+                <div class="chat-message">achaa...suno na..</div>
+            </div> <br>
+
+
+      <!-- ---------------latest oldchat ------------------------------            -->
+
+
+
+
+      {% for oldchat in old3  %}
+
+            <div class="a-chat">
+                <div class="username-message" style="font-family: 'Merienda', cursive;font-size: 0.8em;">{{oldchat.timestamp}}</div>
+                <div class="username-message">{{oldchat.user}}</div>
+                <div class="chat-message">{{oldchat.message}}</div>
+            </div> <br>
+
+            {% endfor %}
+
+
+
+            <!-- ----------------Dynamic entries------------------------------ -->
+
+            {% for chat in chats  %}
+
+            <div class="a-chat">
+                <div class="username-message" style="font-family: 'Merienda', cursive;font-size: 0.8em;">{{chat.timestamp}}</div>
+                <div class="username-message">{{chat.user}}</div>
+                <div class="chat-message">{{chat.message}}</div>
+            </div> <br>
+
+            {% endfor %}
+
+            
+            
+
+            
+
+
+
+            <div id="down">....Thoda sa upar jaao....</div>
+            <!-- <div id="down">....Thoda sa upar jaao....</div> -->
+
+
+
+        </div>
+        <div class="downbtn" style="margin-top: 2em;">
+            <a href="https://jackjill.pythonanywhere.com/newwebapp">New-loveApp</a><br>
+        </div> <br>
+        
+    </div>
+
+
+</body>
+
+</html>
