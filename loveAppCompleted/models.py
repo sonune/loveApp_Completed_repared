@@ -42,3 +42,24 @@ class Notification(models.Model):
     def regiser(self):
         self.save()
     
+    
+    
+    
+    
+class oldChats1(models.Model):
+    message = models.CharField(max_length=10000, default="" , null=True, blank = True)
+    timestamp = models.CharField(max_length=1000, default="" ,  null=True, blank = True)
+    user = models.CharField(max_length=255,default="" ,  null=True, blank = True)
+
+
+
+class oldChats2(models.Model):
+    message= models.CharField(max_length=10000, default="" , null=True, blank = True)
+    timestamp = models.CharField(max_length=1000, default="" ,  null=True, blank = True)
+    user = models.CharField(max_length=255,default="" ,  null=True, blank = True)
+
+
+class oldChats3(models.Model):
+    message = models.CharField(max_length=10000, default="" , null=True, blank = True)
+    timestamp = models.CharField(max_length=1000, default="" ,  null=True, blank = True)
+    user = models.CharField(max_length=255,default="" ,  null=True, blank = True)
