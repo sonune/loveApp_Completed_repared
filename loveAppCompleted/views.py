@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from requests import request
+from .models import loveChatModel, Notification, oldChats1, oldChats2,oldChats3
 from .models import loveChatModel, Notification
 
 # Create your views here.
