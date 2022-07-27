@@ -40,11 +40,17 @@ def Sonu(request):
             return render(request, 'chatApplication.html',{'chats' : chats})
     return render(request, 'chatApplication.html')
 
+
+
 def Chatlog(request):
-    chats = loveChatModel.objects.all()
-    return render(request, 'log.html',{'chats' : chats})
-# def Try(request):
-#     return render(request, 'try.html')
+    oldchat1 = oldChats1.objects.all()
+    oldchat2 = oldChats2.objects.all()
+    oldchat3 = oldChats3.objects.all()
+    newchats = loveChatModel.objects.all()
+    return render(request, 'logs.html',{'chats' : newchats , 'old1' : oldchat1 , 'old2' : oldchat2 , 'old3' : oldchat3})
+
+
+
 
 def Call(request):
     if request.method == "POST":
